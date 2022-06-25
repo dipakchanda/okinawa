@@ -1,0 +1,5 @@
+{
+  "name": "Okinawa-package",
+  "version": "1.0.0",
+  "build": "CI= npm run build"
+}

@@ -1,0 +1,67 @@
+// Buttons
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-shadow: none;
+    box-shadow: 0px 0px 10px rgba($black-clr, 0.3);
+
+    // 767px
+    @media (max-width: $break-767) {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+        text-shadow: none;
+        box-shadow: 0px 0px 10px rgba($black-clr, 0.3);
+    }
+    span {
+        // 767px
+        @media (max-width: $break-767) {
+            display: none;
+        }
+    }
+}
+
+// Btn Main
+.btn-main {
+    color: $white-clr;
+    background-image: url(../images/btn-bg.png);
+    background-position: center center;
+    background-size: cover;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white-clr;
+        background-image: url(../images/btn-bg.png) !important;
+    }
+}
+
+// Btn White
+.btn-white {
+    color: $text-clr;
+    background-image: url(../images/btn-bg2.png);
+    background-position: center center;
+    background-size: cover;
+    &:hover,
+    &:focus {
+        color: $text-clr;
+        background-image: url(../images/btn-bg2.png) !important;
+    }
+}
+
+// Btn Main Dark
+.btn-main-dark {
+    color: $white-clr;
+    background-color: darken($primary-clr, 10%);
+    &:hover,
+    &:focus {
+        color: $white-clr;
+        background-color: darken($primary-clr, 20%);
+    }
+}

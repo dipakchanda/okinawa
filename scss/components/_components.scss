@@ -1,0 +1,297 @@
+// Heading
+.section_heading {
+    margin-bottom: 40px;
+
+    // 767px
+    @media (max-width: $break-767) {
+        margin-bottom: 24px;
+    }
+    h6 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    h3 {
+        color: $primary-clr;
+        font-size: 80px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 0 $white-clr, 5px 5px 0 darken($primary-clr, 30%);
+
+        // 767px
+        @media (max-width: $break-767) {
+            font-size: 4em;
+        }
+
+        &.white-h3 {
+            color: $white-clr;
+            text-shadow: 2px 2px 0 $text-clr, 5px 5px 0 $primary-clr;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+// Paragraph
+.section_para {
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Accordian
+.card {
+    border: none;
+    border-radius: 0;
+    .card-header {
+        border-radius: 0;
+        padding: 0;
+        border-bottom: none;
+        background-color: $no-clr;
+        button {
+            color: $text-clr;
+            background-color: $no-clr;
+            width: 100%;
+            padding: 0;
+            padding-left: 50px;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            position: relative;
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;
+            }
+            &:before {
+                content: "-";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 36px;
+                height: 36px;
+                color: $white-clr;
+                background-color: $primary-clr;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 30px;
+                font-weight: 100;
+                line-height: 30px;
+            }
+            &.collapsed {
+                &:before {
+                    content: "+";
+                }
+            }
+
+            // 767px
+            @media (max-width: $break-767) {
+                font-size: 16px;
+            }
+        }
+    }
+    .card-body {
+        padding: 30px;
+        padding-left: 50px;
+
+        // 767px
+        @media (max-width: $break-767) {
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 0;
+        }
+        p {
+            margin-bottom: 0;
+            b {
+                color: $text-clr;
+            }
+            + p {
+                margin-top: 10px;
+            }
+            + h5 {
+                margin-top: 20px;
+            }
+        }
+    }
+    + .card {
+        margin-top: 30px;
+    }
+}
+
+// Review Grid
+.review-grid {
+    figure {
+        margin-bottom: 0;
+        position: relative;
+        .user-image {
+            width: 80px;
+            height: 80px;
+            border: 2px solid $primary-clr;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+
+            // 767px
+            @media (max-width: $break-767) {
+                width: 50px;
+                height: 50px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            .name {
+                display: block;
+                color: $primary-clr;
+                font-weight: 700;
+                text-transform: capitalize;
+                position: relative;
+                padding: 30px;
+                &:before {
+                    content: "\f10d";
+                    font-family: FontAwesome;
+                    position: absolute;
+                    color: rgba($black-clr, 0.1);
+                    font-size: 3em;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .cs-rating {
+                display: flex;
+                flex-wrap: wrap;
+                .rating-xs {
+                    display: inline-block;
+                    .caption {
+                        display: none;
+                    }
+                }
+                .review {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Product Box
+.product-box {
+    border: 3px solid $text-clr;
+    display: block;
+    padding: 5px;
+    background-color: $white-clr;
+    &:hover {
+        border-color: $text-clr;
+    }
+}
+
+// Static Banner
+#static-banner {
+    .content {
+        padding: 40px 0;
+        border-radius: 10px;
+
+        // 767px
+        @media (max-width: $break-767) {
+            padding: 30px 0;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 46px;
+        margin-bottom: 0;
+        font-weight: 700;
+
+        // 767px
+        @media (max-width: $break-767) {
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+    ul {
+        color: $text-clr;
+
+        // 767px
+        @media (max-width: $break-767) {
+            font-size: 13px;
+        }
+        li {
+            display: inline-block;
+            + li {
+                &:before {
+                    content: " » ";
+                    margin: 0px 5px;
+                }
+            }
+            a {
+                color: $text-clr;
+                font-weight: 700;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Static Page
+.static-page {
+    padding-bottom: 80px;
+
+    // 767px
+    @media (max-width: $break-767) {
+        padding-bottom: 50px;
+    }
+
+    h3,
+    h4 {
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 600;
+
+        // 767px
+        @media (max-width: $break-767) {
+            font-size: 18px;
+        }
+        + p {
+            margin-top: 10px;
+        }
+    }
+    p {
+        margin-bottom: 0;
+        + h2 {
+            margin-top: 50px;
+
+            // 767px
+            @media (max-width: $break-767) {
+                margin-top: 30px;
+            }
+        }
+        + h3 {
+            margin-top: 20px;
+        }
+        + p {
+            margin-top: 15px;
+        }
+    }
+    a {
+        font-weight: 700;
+        color: $primary-clr;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
