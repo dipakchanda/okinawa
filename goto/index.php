@@ -1,3 +1,3 @@
 <?php
- header("Location:https://bit.ly/3HS8sMm");
+ header("Location:https://bit.ly/3A3jg8t");
  exit;
